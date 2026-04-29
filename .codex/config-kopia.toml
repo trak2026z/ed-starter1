@@ -98,16 +98,3 @@ web_search = "cached"
 network_access = true
 exclude_slash_tmp = false
 exclude_tmpdir_env_var = false
-
-################################################################################
-# Hooks
-################################################################################
-
-[[hooks.Stop]]
-matcher = "*"
-
-[[hooks.Stop.hooks]]
-type = "command"
-command = 'python3 "$(git rev-parse --show-toplevel)/.codex/hooks/ensure-spec-updated.py"'
-timeout = 10
-statusMessage = "Checking whether ai/spec.md should be updated"

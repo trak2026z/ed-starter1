@@ -38,3 +38,16 @@
 - Business logic lives in lib/ (server-side only, uses fs)
 - Client state in store/flightsStore.ts — single Zustand store
 - Components are client ('use client') or server (default) — don't mix
+
+## Spec / Handoff
+
+- Keep `ai/spec.md` updated during multi-step work.
+- Before running `/compact`, update `ai/spec.md`.
+- After any meaningful code change, update `ai/spec.md` with:
+  - current goal,
+  - decisions made,
+  - files changed,
+  - tests run or still needed,
+  - risks,
+  - next step.
+- Do not rely only on conversation history for architectural decisions.
